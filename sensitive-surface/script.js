@@ -4,6 +4,7 @@
 const quantNodes = 55;
 const surfWidth = 700;
 const surfHeight = 500;
+// There are `Math.sqrt(quantNodes / (surfWidth / surfHeight))` nodes in height
 const nodesDistance = surfHeight / Math.sqrt(quantNodes / (surfWidth / surfHeight));
 const quantColumn = Math.floor(surfWidth / nodesDistance);
 const quantRow = Math.floor(surfHeight / nodesDistance);
