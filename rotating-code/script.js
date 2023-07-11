@@ -30,7 +30,7 @@ function loadImg(curCanvasId, i) {
         context.drawImage(imageObj, sourceX, sourceY, sourceWidth, sourceHeight, destX, destY, destWidth, destHeight);
     }
 
-    imageObj.src = "code.png";
+    imageObj.src = "static/code.png";
 }
 
 // Create grid of canvas
