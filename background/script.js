@@ -43,3 +43,36 @@ function collectAnimationObjects() {
     }
 }
 
+let click = 1, angle = 0;
+let tl = gsap.timeline();
+
+document.addEventListener("click", function(e) {
+    angle += 360;
+
+    if (click === 1) {
+        click = 2;
+        tl.to(".block", {
+            duration: 3,
+            rotateZ: angle,
+            x: window.innerWidth,
+            ease: "back.inOut(6)",
+            stagger: {
+                amount: 2.5,
+                grid: "auto",
+                from: "end"
+            }
+        });
+    } else {
+        click = 1;
+        tl.to(".block", {
+            duration: 3,
+            x: 0,
+            ease: "back.inOut(7)",
+            stagger: {
+                amount: 1.5,
+                grid: "auto",
+                from: "centre"
+            }
+        })
+    }
+});
