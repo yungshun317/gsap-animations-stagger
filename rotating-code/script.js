@@ -11,6 +11,7 @@ function loadCanvas(curCanvasId) {
     document.body.appendChild(canvas);
 }
 
+// Crop image into equal parts
 function loadImg(curCanvasId, i) {
     let canvas = document.getElementById(curCanvasId);
     let context = canvas.getContext("2d");
@@ -32,6 +33,7 @@ function loadImg(curCanvasId, i) {
     imageObj.src = "code.png";
 }
 
+// Create grid of canvas
 for (let i = 0; i < 27; i++) {
     let curCanvasId= "canvas_Column" + i;
 
